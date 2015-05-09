@@ -13,3 +13,48 @@ Test CSS
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+body{
+	font-family: Helvetica, Times, sans-serif;
+	font-size: 18px;
+	line-height: 1.4;
+
+}
+
+header{
+	background-color: Purple;
+	font-size: 30px;
+	text-align: center;
+	color:white;
+	padding: 5%;
+}
+
+h1 span{
+	opacity: .8;
+}
+
+section.intro{
+	padding-top: 50px;
+	padding-bottom: 40px;
+	background-image: url("../images/bg-image3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+section.piclist{
+	text-align: center;
+}
+
+img{
+	text-align: center;
+}
+
+p{
+	margin-top: 5%;
+}
+
+a{
+	color: #d5265c;
+	text-decoration: none;
+}
