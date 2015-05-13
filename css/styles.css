@@ -21,6 +21,15 @@ body{
 
 }
 
+h1 span{
+	opacity: .8;
+}
+
+h2 {
+	font-size: 25px;
+	font-family: Helvetica, sans-serif;
+}
+
 header{
 	background-color: Purple;
 	font-size: 30px;
@@ -29,9 +38,6 @@ header{
 	padding: 5%;
 }
 
-h1 span{
-	opacity: .8;
-}
 
 section.intro{
 	padding-top: 50px;
@@ -39,7 +45,7 @@ section.intro{
 	background-image: url("../images/bg-image3.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	text-align: center;
+	text-align: left;
 }
 
 section.piclist{
@@ -51,7 +57,7 @@ img{
 }
 
 p{
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 a{
