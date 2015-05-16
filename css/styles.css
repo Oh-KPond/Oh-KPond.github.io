@@ -38,7 +38,7 @@ h2 {
 }
 
 header{
-	background-color: Purple;
+	background-color: purple;
 	font-size: 30px;
 	text-align: center;
 	color:white;
@@ -46,7 +46,6 @@ header{
 }
 
 img{
-	text-align: center;
 	padding:3em;
 }
 
@@ -63,9 +62,7 @@ section.intro{
 	text-align: left;
 }
 
-section.piclist{
-	text-align: center;
-}
+
 
 
 
