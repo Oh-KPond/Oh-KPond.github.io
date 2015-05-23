@@ -1,9 +1,6 @@
-<!-- This is a comment. The text won't show up on your page. -->
-<!-- Doctype for HTML 5 -->
 <!DOCTYPE html>
 <html>
 
-  <!-- The head is for metadata. This will not show up on your page. -->
   <head>
 
     <!-- Information about how to display your page content -->
@@ -25,43 +22,86 @@
     <!-- This loads your favicon (shows in the browser tab) -->
     <link rel='icon' type='image/png' href='images/favicon.png'>
 
-  </head> <!-- head closing tag -->
+    <!-- This loads js for sticky nav-->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet" type="text/css">
 
-  <!-- The body is where your page content goes. -->
-  <body> 
+  </head>
+
+    <body>
     <header>
       <h1>Kate Pond: <span> Amazing Person Extraordinaire!</span></h1>
     </header>
 
-<section class="intro">
-  <h2>What Makes Who I Am</h2>
+    <!-- HTML for the sticky nav-->
+    <div id="header" class="header">
+ <nav id="nav">
+     <ul class="nav navbar-nav">
+         <li>
+           <a href="#home">Home</a>
+         </li>
+         <li>
+           <a href="#about">About</a>
+         </li>
+         <li>
+           <a href="#services">Services</a>
+         </li>
+         <li>
+           <a href="#contact">Contact</a>
+         </li>
+     </ul>
+ </nav>
+</div>
+
+<!--Use this html to setup the body for sticky nav-->
+<div id="home" class="scrollto">
+  <section class="intro">
+    <h2>What Makes Who I Am</h2>
     <p> Born and raised in sunny Southern California I was one of the first junior rangers of Orange County.</p>
     <p> Most of my life was spent preping to be a full fledged park ranger for the National Park Service. I learned German by living in Austria for a year, I got a degree in Natural Resources Mangagment from the University of Alaska, and I got another degree in Environmental Education from Griffith University in Brisbane Australia.
   </section>
+</div>
+<div id="about" class="scrollto">
+  <section class="becameRanger">
+    <!-- What follows is my rangering career -->
+    <h2>Then I became a Park Ranger!</h2>
+      <p class="katmai">
+        At first I was a German speaking park ranger at Katmai National Park!
+      </p>
+      <img src="images/Katmai.JPG" alt="Here I am in front of some of the ash in the Valley of Ten Thousand Smokes."/>
+      <p class= "USForest">
+        Then I was a U.S. Forest Service Ranger on an Alaska Marine Highway ferry and at the Mendenhall Glacier!
+      </p>
+        <img src="images/AKMarineHwy.jpg" alt="Here I am in front of the map of the Alaska Marine Highway" width= "500" height="500"/>
+        <img src="images/meandstevi.jpg" alt="Here I am with my friend Stevi in front of the beautiful blue Mendenhall Glacier." width="600" height="500"/>
 
-<!-- What follows is my rangering career -->
-
-<section class="becameRanger">
-  <h2>Then I became a Park Ranger!</h2>
-    <p class="katmai">
-      At first I was a German speaking park ranger at Katmai National Park!
-    </p>
-    <img src="images/Katmai.JPG" alt="Here I am in front of some of the ash in the Valley of Ten Thousand Smokes."/>
-    <p class= "USForest">
-      Then I was a U.S. Forest Service Ranger on an Alaska Marine Highway ferry and at the Mendenhall Glacier!
-    </p>
-      <img src="images/AKMarineHwy.jpg" alt="Here I am in front of the map of the Alaska Marine Highway" width= "500" height="500"/>
-      <img src="images/meandstevi.jpg" alt="Here I am with my friend Stevi in front of the beautiful blue Mendenhall Glacier." width="600" height="500"/>
-    
-</section>
+  </section>
+</div>
+<div id="services" class="scrollto">
   <div>
     <p class="findOutMore">If you'd like to know more about what I think about Interpretation and Environmental Education...</p>
     <a href="enviroed.html">Click here!</a>
   </div>
+</div>
+<div id="contact" class="scrollto">
+  <div>
+    <p class="findOutMore">If you'd like to know more about what I think about Interpretation and Environmental Education...</p>
+    <a href="enviroed.html">Click here!</a>
+  </div>
+</div>
 
 <footer>
 <a href="http://thepondsedge.com" target="blank"><p>The Pond's Edge LLC</p></a>
 </footer>
-  </body> <!-- body closing tag -->
 
-</html> <!-- html closing tag -->
+<!--all javascript goes in this file-->
+<script type='text/javascript' src='script.js'></script>
+
+<!-- This loads js for sticky nav-->
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="//cdn.jsdelivr.net/stickynavbar.js/1.1.2/jquery.stickyNavbar.min.js"></script>
+
+  </body>
+
+</html>
