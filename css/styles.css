@@ -68,6 +68,12 @@ img{
   padding:3em;
   margin-left: auto;
   margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+
+img.katmaiImg{
+	width: 40%;
 }
 
 li{
