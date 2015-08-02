@@ -43,7 +43,7 @@ div{
 
 h1{
 	font-size: 1.8em;
-	text-align: center;
+ 	text-align: center;
 }
 
 h1 span{
@@ -62,13 +62,14 @@ header{
 	text-align: center;
 	color:white;
 	padding: 5%;
+  margin-bottom: 20px;
 }
 
 img{
-  padding:3em;
+  padding:1em;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
@@ -91,6 +92,7 @@ li{
 
 p{
 	margin-top: 2%;
+  font-size: 1.5em;
 }
 
 section{
