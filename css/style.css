@@ -288,6 +288,7 @@ ul.work-images li img:hover {
 }
 .footer p a {
 	color:#fff;
+	padding-left: 30px;
 	text-decoration:none;
 }
 .footer p a:hover {
