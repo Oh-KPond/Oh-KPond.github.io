@@ -277,7 +277,7 @@ ul.work-images li img:hover {
 .resume .btn-center {
 	text-align:center;
 }
-.footer {
+.footer, .footer .container {
 	background:#355267;
 	position: fixed;
 	width: 100%;
