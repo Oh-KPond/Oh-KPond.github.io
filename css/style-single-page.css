@@ -31,6 +31,22 @@ a.brand img {
 #profile .container .span5 {
 	padding:40px 0;
 }
+a.gdi-class {
+	display: block;
+	padding:20px 60px;
+	background:#39d084;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:26px;
+	margin:20px 0;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+a.gdi-class {
+	text-decoration:none;
+	background:#11d170;
+}
 a.hire-me {
 	display: inline-block;
  *display: inline;
