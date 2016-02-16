@@ -102,6 +102,19 @@
             <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
             <p>Rainbows and bunny rabbits!</h3>
           </section>
+          <section>
+            <h3>Version Control Types</h3>
+            <div class="fragment">
+              <h4>Centralized Version Control</h4>
+              <p>Examples: CVS, SVN</p>
+              <p>One central server, each client (person) checks out and merges changes to main server</p>
+            </div>
+            <div class="fragment">
+              <h4>Distributed Version Control</h4>
+              <p>Examples: Git, Mercurial</p>
+              <p>Each client (person) has a local repository, which they can then reconcile with the main server.</p>
+            </div>
+          </section>
         </section>
         <!-- <section>
           <section>
@@ -135,32 +148,31 @@
         <!-- Git-->
         <section>
           <h3>Git is Very Soft and Fuzzy</h3>
-          <p>Git Felt!</p>
           <img src="images/gitfelt.jpg">
         </section>
         <section>
-          <section>
-          <h3>Intro to Git</h3>
-          <p>Goals of Git Design</p>
-          <ul>
-            <!-- <li>Fast -- add to your team and code base quickly</li> -->
-            <li>Distributed- Everyone has a local copy of the history</li>
-            <li>Each commit has a corresponding hash (track changes from everyone)</li>
-          </ul>
-          </section>
-          <section>
-            <h3>Version Control Types</h3>
-            <div class="fragment">
-              <h4>Centralized Version Control</h4>
-              <p>Examples: CVS, SVN</p>
-              <p>One central server, each client (person) checks out and merges changes to main server</p>
-            </div>
-            <div class="fragment">
-              <h4>Distributed Version Control</h4>
-              <p>Examples: Git, Mercurial</p>
-              <p>Each client (person) has a local repository, which they can then reconcile with the main server.</p>
-            </div>
-          </section>
+        <h3>Goals of Git Design</h3>
+        <ul>
+          <!-- <li>Fast -- add to your team and code base quickly</li> -->
+          <li>Distributed- Everyone has a local copy of the history (vs. Centralized Version Control)</li>
+          <li>Each commit has a corresponding hash (track changes from everyone)</li>
+        </ul>
+        </section>
+        <section>
+        <h4>GUI (Graphical User Interface)</h4>
+        <a href="https://git-scm.com/downloads/guis">Git GUIs (https://git-scm.com/downloads/guis)</a>
+        <ul>
+          <li><a href="https://www.sourcetreeapp.com/"></a>SourceTree</li>
+          <img src="images/sourcetree-hero-mac-log.png" alt="SourceTree">
+        </ul>
+        </section>
+        <section>
+        <h4>GUI (Graphical User Interface)</h4>
+        <a href="https://git-scm.com/downloads/guis">Git GUIs (https://git-scm.com/downloads/guis)</a>
+        <ul>
+          <li><a href="http://www.gitkraken.com/"></a>GitKraken</li>
+          <img src="images/gitkraken.png" alt="GitKraken">
+        </ul>
         </section>
         <!-- Installation and Setup-->
         <section>
@@ -170,6 +182,13 @@
               <p>Install git</p>
               <img src = "images/install-git.png" alt = "Download latest version of Git"/>
             </a>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+              <p>Windows- Use Git Bash</p>
+              <p>Mac- Use any Terminal</p>
+              <img src = "images/git_svn_bash_terminal.png" alt = "Git Bash and Terminal"/>
+           
           </section>
           <section>
             <h3>Installation and Setup</h3>
@@ -221,12 +240,14 @@ $ git config --list
         <!-- First commands-->
         <section>
           <section>
-            <h3>Your first Local Repository</h3>
-            <p>Go to home directory</p>
+            <h4>Your first Local Repository</h4>
+            <p>Go to home directory/desktop</p>
             <pre><code contenteditable class ="command-line">
   cd ~/
   OR
   cd Users\username
+
+  cd desktop
             </code></pre>
             <p>Create a "working directory"</p>
             <pre><code contenteditable class ="command-line">
@@ -242,6 +263,9 @@ $ git config --list
           <section>
             <h3>Add files</h3>
             <p>Create a new hello_world.txt file in your new folder</p>
+            <pre><code contenteditable class ="command-line">
+  touch hello_world.txt
+            </code></pre>
             <p>Check repo status</p>
             <pre><code contenteditable class ="command-line">
   git status
