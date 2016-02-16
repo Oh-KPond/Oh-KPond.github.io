@@ -80,7 +80,6 @@
         
         <!-- Version control-->
         <section>
-          <section>
             <h3>What is version control?</h3>
             <p>Version control allows you (and your team) to do two powerful things</p>
             <div class="fragment">
@@ -92,7 +91,7 @@
               <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
             </div>
           </section>
-          <section>
+          <!-- <section>
             <h3>Working without Version Control</h3>
             <img src = "images/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
             <p>The Horror!</p>
@@ -101,7 +100,7 @@
             <h3>Working with Version Control</h3>
             <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
             <p>Rainbows and bunny rabbits!</h3>
-          </section>
+          </section> -->
           <section>
             <h3>Version Control Types</h3>
             <div class="fragment">
@@ -115,7 +114,6 @@
               <p>Each client (person) has a local repository, which they can then reconcile with the main server.</p>
             </div>
           </section>
-        </section>
         <!-- <section>
           <section>
             <h3>Brief history of Version Control</h3>
@@ -147,10 +145,6 @@
         </section> -->
         <!-- Git-->
         <section>
-          <h3>Git is Very Soft and Fuzzy</h3>
-          <img src="images/gitfelt.jpg">
-        </section>
-        <section>
         <h3>Goals of Git Design</h3>
         <ul>
           <!-- <li>Fast -- add to your team and code base quickly</li> -->
@@ -158,6 +152,11 @@
           <li>Each commit has a corresponding hash (track changes from everyone)</li>
         </ul>
         </section>
+        <section>
+          <h3>Git is Very Soft and Fuzzy</h3>
+          <img src="images/gitfelt.jpg">
+        </section>
+        
         <section>
         <h4>GUI (Graphical User Interface)</h4>
         <a href="https://git-scm.com/downloads/guis">Git GUIs (https://git-scm.com/downloads/guis)</a>
@@ -188,7 +187,6 @@
               <p>Windows- Use Git Bash</p>
               <p>Mac- Use any Terminal</p>
               <img src = "images/git_svn_bash_terminal.png" alt = "Git Bash and Terminal"/>
-           
           </section>
           <section>
             <h3>Installation and Setup</h3>
@@ -315,13 +313,13 @@ $ git config --list
       First commit. Added hello world to repository.
               </code></pre>
           </section>
-          <section>
+          <!-- <section>
             <h3>Look at our progress, visually</h3>
             <pre><code contenteditable class ="command-line">
   gitk
             </code></pre>
             <img src = "images/gitk.png" alt ="Image of commits for this curriculum repo"/>
-          </section>
+          </section> -->
         </section>
         <!-- Undoing changes -->
         <section>
@@ -436,7 +434,7 @@ git checkout version2
 git checkout master
 git merge version2
             </code></pre>
-            <p>*rebase is another option, but will not be covered in this workshop</p>
+            <p>*rebase in the intest of time is another option, but will not be covered in this demo</p>
           </section>
           <section>
             <h3>Merging</h3>
@@ -479,6 +477,31 @@ git merge master
             </ul>
           </section>
         </section>
+        <!-- Pushing Your Hello World Repo to GitHub-->
+        <section>
+            <h3>GitHub</h3>
+            <h4>Pushing your Repo to GitHub</h4>
+            <p>Create your repo w/ same name on GitHub</p>
+            <img src = "images/bootcamp_2_newrepo.jpg" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
+        </section>
+        <section>
+            <h3>GitHub</h3>
+            <h4>Create your repository</h4>
+            <img src = "images/bootcamp_2_repoinfo.png" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
+        </section>
+        <section>
+            <h3>GitHub</h3>
+            <h4>Link local with remote repo</h4>
+            <p>In your my-first-repo repo (folder)</p>
+            <pre><code contenteditable class ="command-line">
+<p>git remote add origin <em>remote repository URL</em>
+# Sets the new remote</p>
+<p>git remote -v
+# Verifies the new remote URL</p>
+git push origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+            </code></pre>
+          </section> 
         <!-- New repository-->
         <section>
           <section>
@@ -524,7 +547,8 @@ git push origin master
           <section>
             <h3>GitHub</h3>
             <h4>Pulling from remote repository</h4>
-            <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
+            <p>If you are working with a team, you want to make sure that you have (pull) everyone's changes from remote repo before pushing your changes back to the GitHub repo</p> 
+            <p>(Pro-tip, pull before you start making changes too)</p> 
             <pre><code contenteditable class ="command-line">
 # Commit local changes
 git commit -m "My latest commit"

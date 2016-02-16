@@ -216,6 +216,7 @@ body {
 .reveal em,
 .reveal i {
 	font-style: italic;
+	color: yellow;
 }
 
 .reveal ol,
