@@ -189,8 +189,33 @@
               <img src = "images/git_svn_bash_terminal.png" alt = "Git Bash and Terminal"/>
           </section>
           <section>
+            <h3>HELP from the Terminal/Shell</h3>
+            <p>Git Help</p>
+            <pre><code contenteditable class ="command-line">
+             $ git help
+            </code></pre>
+            <pre><code contenteditable class ="command-line">
+             $ git "command" --help
+            </code></pre>
+          </section>
+          <section>
             <h3>Installation and Setup</h3>
-            <p>Setup ssh keys</p>
+            <p>SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account.</p>
+            <p>Check to see if you already have one</p>
+            <pre><code contenteditable class ="command-line">
+             $ ls -al ~/.ssh
+            </code></pre>
+            <p>By default, if you have one, they will be</p>
+            <ul>
+              <li>id_dsa.pub</li>
+              <li>id_ecdsa.pub</li>
+              <li>id_ed25519.pub</li>
+              <li>id_rsa.pub</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+            <p>Get ssh key</p>
             <pre><code contenteditable class ="command-line">
              $ cd ~/.ssh
             </code></pre>
@@ -218,6 +243,14 @@ Your identification has been saved in /Users/you/.ssh/id_rsa.
             <h3>Installation and Setup</h3>
             <p>Add SSH Key to Github</p>
             <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+            <p>Test SSH</p>
+            <pre><code>
+$ssh -T git@github.com
+            </code></pre>
+            <p>https://help.github.com/articles/testing-your-ssh-connection/</p>
           </section>
           <section>
             <h3>Installation and Setup</h3>
@@ -262,7 +295,10 @@ $ git config --list
             <h3>Add files</h3>
             <p>Create a new hello_world.txt file in your new folder</p>
             <pre><code contenteditable class ="command-line">
-  touch hello_world.txt
+  touch hello_world.txt <span class="red">&lt;Unix/OS...&gt;</span>
+            </code></pre>
+            <pre><code contenteditable class ="command-line">
+  New-Item hello_world.txt -type file <span class="red">&lt;Windows&gt;</span>
             </code></pre>
             <p>Check repo status</p>
             <pre><code contenteditable class ="command-line">
@@ -277,7 +313,7 @@ $ git config --list
           </section>
           <section>
             <h3>Changes and commits</h3>
-            <p>Open hello_world.txt and add some more text</p>
+            <p class="blue">Open hello_world.txt and add some more text</p>
             <pre><code contenteditable class ="command-line">
   git status
             </code></pre>
@@ -328,32 +364,31 @@ $ git config --list
             <h4>Undoing local changes</h4> 
             <p>If you haven't committed yet</p>
             <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
+              <p class="blue">Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-  change hello_world.txt
   git checkout hello_world.txt
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+            <p class="fragment pink">Look at hello_world.txt. Your changes are gone.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Undoing staged changes</h4> 
             <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
+              <p class="blue">Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 git add hello_world.txt
 git reset HEAD hello_world.txt
 git checkout hello_world.txt
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+            <p class="fragment pink">Look at hello_world.txt. Your changes are gone.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Undoing staged changes</h4> 
             <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
+              <p class="blue">Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 git add hello_world.txt
 git commit -am "Changing and committing some lines"
@@ -361,12 +396,15 @@ git log --pretty=oneline
 git revert [HASH]
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+            <p class="fragment pink">Look at hello_world.txt. Your changes are gone.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Remove a file from staging</h4>
-            <p>Create new file my_new_file.txt</p>
+            <p>You only want to commit two instead of there of the files you changed</p>
+            <p class="blue">Create new file my_new_file.txt</p>
+            <p class="blue">Create another new file my_new_file2.txt</p>
+            <p>You only want to commit two instead of three of the files you changed</p>
               <pre><code contenteditable class ="command-line">
 git add my_new_file.txt
 git reset my_new_file.txt
@@ -374,12 +412,8 @@ git reset my_new_file.txt
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
-            <h4>Delete a file</h4>
-            <p>Create new file my_other_file.txt</p>
-            <pre><code contenteditable class ="command-line">
-git add my_other_file.txt
-            </code></pre>
-            <p>Manually delete your file</p>
+            <h4>Delete a file and stop following</h4>
+            <p class="blue">Manually delete your my_new_file2.txt</p>
             <pre><code contenteditable class ="command-line">
 git rm my_other_file.txt
             </code></pre>
@@ -401,7 +435,7 @@ git rm my_other_file.txt
             <pre><code contenteditable class ="command-line">
 git checkout -b version2
             </code></pre>
-            <p>Add new lines to hello_world.txt</p>
+            <p class="blue">Add new LINES to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
 git commit -m "Adding changes to version 2"
@@ -414,11 +448,11 @@ git commit -m "Adding changes to version 2"
             <pre><code contenteditable class ="command-line">
 git branch
             </code></pre>
-            <p>Switch to master and look at hello_world.txt</p>
+            <p>Switch to master and <span class="pink">look at hello_world.txt</span></p>
             <pre><code contenteditable class ="command-line">
 git checkout master
             </code></pre>            
-            <p>Switch to version2 and look at hello_world.txt</p>
+            <p>Switch to version2 and <span class="pink">look at hello_world.txt</span></p>
             <pre><code contenteditable class ="command-line">
 git checkout version2
             </code></pre>
@@ -439,12 +473,12 @@ git merge version2
           <section>
             <h3>Merging</h3>
             <h4>Merge conflicts</h4>
-            <p>Change first line in hello_world.txt in master branch</p>
+            <p class="blue">Change FIRST line in hello_world.txt in master</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
 git commit -m "Changing first line in master"
             </code></pre>
-            <p>Change first line in hello_world.txt in version2 branch</p>
+            <p class="blue">Change FIRST line in hello_world.txt in version2</p>
             <pre><code contenteditable class ="command-line">
 git checkout version2
 # open hello_world.txt and change first line
@@ -459,7 +493,7 @@ git commit -m "Changing first line in version2"
             <pre><code contenteditable class ="command-line">
 git merge master
             </code></pre>
-            <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
+            <p class ="fragment blue">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
                        
           </section>
         </section>
@@ -536,13 +570,13 @@ git pull origin master
           <section>
             <h3>GitHub</h3>
             <h4>Push to GitHub Repo</h4>
-            <p>Edit the ReadMe file
+            <p class="blue">Edit the ReadMe file</p>
             <pre><code contenteditable class ="command-line">
 git add README
 git commit -m "Updating readme file"
 git push origin master
             </code></pre>
-            <p class ="fragment">Go look at your github repo online</p>
+            <p class ="fragment pink">Go look at your github repo online</p>
           </section>
           <section>
             <h3>GitHub</h3>
