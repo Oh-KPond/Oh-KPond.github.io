@@ -200,60 +200,6 @@
           </section>
           <section>
             <h3>Installation and Setup</h3>
-            <p>SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account.</p>
-            <p>Check to see if you already have one</p>
-            <pre><code contenteditable class ="command-line">
-             $ ls -al ~/.ssh
-            </code></pre>
-            <p>By default, if you have one, they will be</p>
-            <ul>
-              <li>id_dsa.pub</li>
-              <li>id_ecdsa.pub</li>
-              <li>id_ed25519.pub</li>
-              <li>id_rsa.pub</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Get ssh key</p>
-            <pre><code contenteditable class ="command-line">
-             $ cd ~/.ssh
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
-$ ssh-keygen -t rsa -C "your_email@example.com"
-# Generating public/private rsa key pair.
-# Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
-Enter passphrase (empty for no passphrase): [Type a passphrase]
-# Enter same passphrase again: [Type passphrase again]
-            </code></pre>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Get SSH Key</p>
-            <pre><code contenteditable class ="command-line">
-Your identification has been saved in /Users/you/.ssh/id_rsa.
-# Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
-# The key fingerprint is:
-# 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-            </code></pre>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Add SSH Key to Github</p>
-            <img class="box" src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Test SSH</p>
-            <pre><code>
-$ssh -T git@github.com
-            </code></pre>
-            <p>https://help.github.com/articles/testing-your-ssh-connection/</p>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
             <p>Setup name and email in gitconfig</p>
             <pre><code contenteditable class ="command-line">
 $ git config --global user.name "Your Name Here"
@@ -294,19 +240,19 @@ $ git config --list
           <section>
             <h3>Add files</h3>
             <p>Create a new hello_world.txt file in your new folder</p>
+            <p>Try this first</p>
             <pre><code contenteditable class ="command-line">
-  touch hello_world.txt <span class="red">&lt;Unix/OS...&gt;</span>
+  touch hello_world.txt
             </code></pre>
             <pre><code contenteditable class ="command-line">
-  New-Item hello_world.txt -type file <span class="red">&lt;Windows&gt;</span>
+  New-Item hello_world.txt -type file <span class="red">&lt;If that doesn't work, try this&gt;</span>
             </code></pre>
             <p>Check repo status</p>
             <pre><code contenteditable class ="command-line">
-  git status
+  git status 
             </code></pre>
-            <p>Tell Git to track our new file</p>
             <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
+  git add hello_world.txt <span class="red">&lt;Tell Git to track our new file&gt;</span>
   git status
             </code></pre>
             <p>File is now tracked by Git</p>
@@ -401,10 +347,9 @@ git revert [HASH]
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Remove a file from staging</h4>
-            <p>You only want to commit two instead of there of the files you changed</p>
+            <p>You only want to commit two instead of three of the files you changed</p>
             <p class="blue">Create new file my_new_file.txt</p>
             <p class="blue">Create another new file my_new_file2.txt</p>
-            <p>You only want to commit two instead of three of the files you changed</p>
               <pre><code contenteditable class ="command-line">
 git add my_new_file.txt
 git reset my_new_file.txt
@@ -535,7 +480,14 @@ git merge master
 git push origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
             </code></pre>
-          </section> 
+            <p>When you git clone, git fetch, git pull, or git push to a remote repository using HTTPS URLs on the command line, you'll be asked for your GitHub username and password</p>
+        </section>
+        <section>
+          <h3>GitHub</h3>
+            <h4>Link local with remote repo</h4>
+            <p>You can use a credential helper so Git will remember your GitHub username and password every time it talks to GitHub.<p>
+            <a href="https://help.github.com/articles/caching-your-github-password-in-git/">https://help.github.com/articles/caching-your-github-password-in-git/</a>
+        </section> 
         <!-- New repository-->
         <section>
           <section>
@@ -559,12 +511,7 @@ git push origin master
             <h3>GitHub</h3>
             <h4>Get Local Repository of GitHub Repo</h4>
             <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
-git init
-git remote add origin git@github.com:username/NAME-OF-REPO
-git pull origin master
+git clone <span class ="green">repo url</span></li>
             </code></pre>
           </section>
           <section>
@@ -656,6 +603,61 @@ git fetch upstream
           <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
             <div class ="clear"></div></div>
         </section>
+  <!--EXTRA know how-->
+        <section>
+            <h3>Installation and Setup</h3>
+            <p>SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account.</p>
+            <p>Check to see if you already have one</p>
+            <pre><code contenteditable class ="command-line">
+             $ ls -al ~/.ssh
+            </code></pre>
+            <p>By default, if you have one, they will be</p>
+            <ul>
+              <li>id_dsa.pub</li>
+              <li>id_ecdsa.pub</li>
+              <li>id_ed25519.pub</li>
+              <li>id_rsa.pub</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+            <p>Get ssh key</p>
+            <pre><code contenteditable class ="command-line">
+             $ cd ~/.ssh
+            </code></pre>
+            <pre><code contenteditable class ="command-line">
+$ ssh-keygen -t rsa -C "your_email@example.com"
+# Generating public/private rsa key pair.
+# Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+            </code></pre>
+            <pre><code contenteditable class ="command-line">
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+# Enter same passphrase again: [Type passphrase again]
+            </code></pre>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+            <p>Get SSH Key</p>
+            <pre><code contenteditable class ="command-line">
+Your identification has been saved in /Users/you/.ssh/id_rsa.
+# Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
+# The key fingerprint is:
+# 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+            </code></pre>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+            <p>Add SSH Key to Github</p>
+            <img class="box" src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
+          </section>
+          <section>
+            <h3>Installation and Setup</h3>
+            <p>Test SSH</p>
+            <pre><code>
+$ssh -T git@github.com
+            </code></pre>
+            <p>https://help.github.com/articles/testing-your-ssh-connection/</p>
+          </section>
 			</div>
   		<footer>
         <div class="copyright">
