@@ -1,4 +1,8 @@
 /*This stylesheet contains some custom class rather than Bootstrap*/
+
+body {
+	background-color: #fff;
+}
 		
 a.brand img {
 	border-radius:50%;
@@ -9,19 +13,17 @@ a.brand img {
 }
 .profile h2, .skills h2, .work h2, .resume h2 {
 	font-weight:normal;
-	color: #39D084;
+	color: #355267;
 }
 /***** Profile *****/
-	.profile h1 {
+.profile h1, .profile h3 {
 	color:#39d084;
 	font-weight: normal;
+	text-shadow: 1px 1px #D3D3D3;
 }
-.profile h3 {
-	color:#fff;
-	font-weight: normal;
-}
+
 .profile p {
-	color:#fff;
+	color:#355267;
 	font-size:18px;
 	line-height: 35px;
 	margin-top: 30px;
@@ -30,6 +32,7 @@ a.brand img {
 	padding:40px 0;
 }
 a.gdi-class {
+	box-shadow: 3px 3px #D3D3D3;
 	display: block;
 	padding:20px 60px;
 	background:#39d084;
@@ -46,6 +49,7 @@ a.gdi-class {
 	background:#11d170;
 }
 a.hire-me {
+	box-shadow: 3px 3px #D3D3D3;
 	display: inline-block;
  *display: inline;
 	padding:20px 60px;
@@ -272,6 +276,8 @@ ul.work-images li img:hover {
 }
 /***** Resume container *****/
 .resume h3 {
+	color:#355267;
+	font-weight: normal;
 	margin:60px 0;
 }
 .resume .btn-center {
