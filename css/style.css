@@ -17,7 +17,7 @@ a.brand img {
 }
 /***** Profile *****/
 .profile h1, .profile h3 {
-	color:#39d084;
+	color:#71c5a1;
 	font-weight: normal;
 	text-shadow: 1px 1px #D3D3D3;
 }
@@ -35,7 +35,7 @@ a.gdi-class {
 	box-shadow: 3px 3px #D3D3D3;
 	display: block;
 	padding:20px 60px;
-	background:#39d084;
+	background:#71c5a1;
 	color:#fff;
 	text-transform:uppercase;
 	font-size:26px;
@@ -46,14 +46,14 @@ a.gdi-class {
 }
 a.gdi-class {
 	text-decoration:none;
-	background:#11d170;
+	background:#e87d54;
 }
 a.hire-me {
 	box-shadow: 3px 3px #D3D3D3;
 	display: inline-block;
  *display: inline;
 	padding:20px 60px;
-	background:#39d084;
+	background:#e87d54;
 	color:#fff;
 	text-transform:uppercase;
 	font-size:26px;
@@ -299,4 +299,8 @@ ul.work-images li img:hover {
 }
 .footer p a:hover {
 	color:#39d084;
+}
+
+.navbar-inner {
+		background-color: #71c5a1;
 }
