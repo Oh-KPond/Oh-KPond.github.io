@@ -26,6 +26,41 @@
     "Signs point to yes", "Without a doubt", "Yes", "Yes definitely", "You may rely on it",
     "Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now",
     "Dont count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful")</h3>
+    <h3>import random
+import string
+from time import sleep
+import sys
+
+def print_slowly(text):
+    for c in text:
+        print c,
+        sys.stdout.flush()
+        sleep(0.2)
+
+# 8 Ball Answers
+answers = ("As I see it, yes", "It is certain", "It is decidedly so", "Most likely", "Outlook good",
+    "Signs point to yes", "Without a doubt", "Yes", "Yes definitely", "You may rely on it",
+    "Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now",
+    "Dont count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful")
+
+print ('Welcome to the Magic 8 Ball!')
+print ('Please ask your question!')
+question = raw_input()
+print_slowly('\nThat\'s what you want to know?!')
+
+
+print_slowly('\n\n...alright I guess... Here we go!\n')
+
+print_slowly('\nshaking...\n' * 3)
+
+while True:
+    what = random.choice(answers)
+    print('\nMy answer is...\n')
+    print_slowly(what + '!\n')
+    print ('\nIf you  are done consulting the Magic 8 ball, type QUIT. Or ask another question!')
+    question = raw_input()
+    if question == 'QUIT':
+        break</h3>
 </div>
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
